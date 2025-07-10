@@ -1,5 +1,9 @@
 name: Playwright Tests
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        default: 'warning'
   push:
     branches: [ main, DEV ]
   pull_request:
