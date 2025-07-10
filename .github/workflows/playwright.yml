@@ -30,7 +30,8 @@ jobs:
     - name: Serve built project and run tests
       run: |
           npx serve -s dist -l 4173 &
-          set ENV=pipe & npx playwright test
+          set ENV=pipe
+          npx playwright test
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
