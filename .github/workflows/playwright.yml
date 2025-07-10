@@ -28,8 +28,9 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Serve built project and run tests
-      run: |
-          npx serve -s dist -l 4173 && set ENV=pipe && npx playwright test
+      run: npx serve -s dist -l 4173
+    - name: Run tests
+      run: start cmd /C "set ENV=pipe && npx playwright test"
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
