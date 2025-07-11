@@ -29,7 +29,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Serve built project and run tests
       run:  
-            start cmd /k "npx serve -s dist -l 4173"
+            start "" cmd /k "npx serve -s dist -l 4173"
             timeout /t 5 /nobreak
             set ENV=pipe
             npx playwright test
