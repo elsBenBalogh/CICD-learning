@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   webServer: {
-    command: 'npx serve -s dist -l 4173',
+    command: 'npm run preview',
     port: 4173,
     timeout: 30000
   },
