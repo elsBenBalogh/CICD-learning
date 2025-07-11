@@ -29,7 +29,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Serve built project and run tests
       run:  
-            $env:ENV = pipe;
+            $env:ENV = "pipe";
             npx playwright test
     - name: Run Playwright tests
       run: npx playwright test
