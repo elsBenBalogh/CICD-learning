@@ -12,6 +12,11 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  webServer: {
+    command: 'npx serve -s dist -l 4173',
+    port: 4173,
+    timeout: 30000
+  },
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
