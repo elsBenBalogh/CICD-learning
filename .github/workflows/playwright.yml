@@ -29,11 +29,8 @@ jobs:
       run: npx playwright install --with-deps
     - name: Serve built project and run tests
       run:  
-            rem Start the server in a new window
             start "" cmd /k "npx serve -s dist -l 4173"
-            rem Wait for the server to start up (adjust time if needed)
             timeout /t 5 /nobreak
-            rem Set environment variable and run Playwright tests
             set ENV=pipe
             npx playwright test
     - name: Run Playwright tests
