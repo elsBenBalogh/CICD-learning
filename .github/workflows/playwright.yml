@@ -29,8 +29,6 @@ jobs:
       run: npx playwright install --with-deps
     - name: Serve built project and run tests
       run:  
-            Start-Process cmd -ArgumentList '/k npx serve -s dist -l 4173'
-            Start-Sleep -Seconds 5
             set ENV=pipe
             npx playwright test
     - name: Run Playwright tests
